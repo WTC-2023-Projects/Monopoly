@@ -1,0 +1,14 @@
+#save game
+
+Player_1 = 0
+Player_1_money = 0
+Player_cards = []
+Player_1 = 0
+Player_1_money = 0
+Player_cards = []
+Player_1 = 0
+Player_1_money = 0
+Player_cards = []
+Player_1 = 0
+Player_1_money = 0
+Player_cards = []
