@@ -5,20 +5,24 @@ WIN = p.display.set_mode((WIDTH, HEIGHT))
 p.display.set_caption("F")
 
 white = (255, 255, 255)
+FPS = 60
 
-def main():
+def draw_window():
+    WIN.fill(white)
+    p.display.update()
     
+    
+def main():
+    clock = p.time.Clock()
     run = True
     while run:
-        
+        clock.tick(FPS)
         for event in p.event.get():
             if event.type == p.QUIT:
                 run = False
-        WIN.fill(white)
-        p.display.update()
+        
+        draw_window()
     
-    
-
     p.quit(white)
     
     
