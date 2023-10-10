@@ -1,4 +1,6 @@
 import pygame as p
+import os
+
 
 WIDTH, HEIGHT = 900, 500
 WIN = p.display.set_mode((WIDTH, HEIGHT))
@@ -6,7 +8,7 @@ p.display.set_caption("F")
 
 white = (255, 255, 255)
 FPS = 60
-
+yellow_spaceship = p.image.load(os.path.join())
 def draw_window():
     WIN.fill(white)
     p.display.update()
