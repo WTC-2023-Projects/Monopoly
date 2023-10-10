@@ -1,2 +1,14 @@
+import radice as rd
+
+
 def monopoly():
-    pass #pass
+    pass 
+
+def run_game():
+    pass
+
+def menu():
+    pass
+
+if __name__ == "__main__":
+    pass
