@@ -6,7 +6,7 @@ def monopoly():
 def run_game():
     pass
 
-def menu():
+def start_menu():
     options = {1: "Add Player", 2: "Start Game"}
     
     for option in options:
@@ -15,6 +15,11 @@ def menu():
     player_input(options)
     
     print(options[option])
+    
+def player_menu():
+    options = {1: "Roll Dice", 2: "Start Game"}
+    
+    
 def player_input(options):
     option = input("What would you like to do? ")
     
@@ -25,4 +30,4 @@ def player_input(options):
         return player_input(options)
 
 if __name__ == "__main__":
-    menu()
+    start_menu()

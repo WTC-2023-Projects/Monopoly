@@ -1,71 +1,55 @@
 #places with prices
 
 def place():
-    
-    Board = [
-            Tile("GO"),
-            Property("Mediterranean Avenue", 60, 2),
-            Tile("Community Chest"),
-            Property("Baltic Avenue",60, 8),
-            Tile("Income Tax"),
-            Property("Reading Railroad", 200, 50),
-            Property("Oriental Avenue", 100, 6),
-            Tile("Chance"),
-            Property("Vermont Avenue", 100, 6),
-            Property("Connecticut Avenue", 120, 8),
-            Tile("Jail"),
-            Property("St. Charles Place", 140, 10),
-            Utility("Electric Company", 150, 1),
-            Property("States Avenue", 140, 10),
-            Property("Virginia Avenue", 160, 12),
-            Property("Pennsylvania Railroad", 200, 50),
-            Property("St. James Place", 180, 14),
-            Community("Community Chest"),
-            Property("Tennessee Avenue", 180, 14),
-            Property("New York Avenue", 200, 16),
-            Tile("Free Parking"),
-            Property("Kentucky Avenue", 220, 18),
-            Tile("Chance"),
-            Property("Indiana Avenue", 220, 18),
-            Property("Illinois Avenue", 240, 20),
-            Property("B. & O. Railroad", 200, 50),
-            Property("Atlantic Avenue", 260, 22),
-            Property("Ventnor Avenue", 260, 22),
-            ("Water Works", 150, 0),
-            Property("Marvin Gardens", 280, 24),
-            Jail("Go To Jail"),
-            Property("Pacific Avenue", 300, 26),
-            Property("North Caroliina Avenue", 300, 26),
-            Tile("Community Chest"),
-            Property("Pennsylvania Avenue", 320, 28),
-            Property("Short Line", 200, 50),
-            Chance("Chance"),
-            Property("Park Place", 350, 35),
-            Tile("Luxury Tax", -100),
-            Property("Boardwalk", 400, 50)]
+    # board = [
+        # Property("OLD KENT ROAD", 60, 70)]
+    Board = {
+        0: {"Name": "Go", "Mortgage": 200},
+    1: {"Name": "OLD KENT ROAD", "Mortgage": 60, "Levels": (70, 130, 220, 370, 750)},
+    2: {"Name": "EVENT TILE", "Mortgage": 0},
+    3: {"Name": "WHITECHAPEL ROAD", "Mortgage": 60},
+    4: {"Name": "EVENT TILE", "Mortgage": 0},
+    5: {"Name": "THE ANGEL, ISLINGTON", "Mortgage": 100},
+    6: {"Name": "EUSTON ROAD", "Mortgage": 100},
+    7: {"Name": "LOCATION", "Mortgage": 100},
+    9: {"Name": "PENTONVILLE ROAD", "Mortgage": 120},
+    10: {"Name": "JAIL", "Mortgage": 50},
+    11: {"Name": "PALL MALL", "Mortgage": 140},
+    12: {"Name": "EVENT TILE", "Mortgage": 0},
+    13: {"Name": "WHITE HALL", "Mortgage": 140},
+    14: {"Name": "NORTHUMB'ND AVENUE", "Mortgage": 160},
+    15: {"Name": "MARLBOROUGH STREET", "Mortgage": 180},
+    16: {"Name": "LOCATION", "Mortgage": 100},
+    17: {"Name": "VINE STREET", "Mortgage": 200},
+    18: {"Name": "FREE PARKING", "Mortgage": 0},
+    19: {"Name": "STRAND", "Mortgage": 220},
+    20: {"Name": "EVENT TILE", "Mortgage": 0},
+    21: {"Name": "FLEET STREET", "Mortgage": 220},
+    22: {"Name": "TRAFALGAR SQUARE", "Mortgage": 240},
+    23: {"Name": "LEICESTER", "Mortgage": 260},
+    24: {"Name": "CONVENTRY STREET", "Mortgage": 260},
+    25: {"Name": "LOCATION", "Mortgage": 100},
+    26: {"Name": "PICCADILLY", "Mortgage": 280},
+    27: {"Name": "JAIL", "Mortgage": 50},
+    28: {"Name": "REGENT STREET", "Mortgage": 300},
+    29: {"Name": "EVENT TILE", "Mortgage": 0},
+    30: {"Name": "OXFORD STREET", "Mortgage": 300},
+    31: {"Name": "BOND STREET", "Mortgage": 320},
+    32: {"Name": "EVENT TILE", "Mortgage": 0},
+    33: {"Name": "PARK LANE", "Mortgage": 350},
+    34: {"Name": "LOCATION", "Mortgage": 100},
+    35: {"Name": "MAYFAIR", "Mortgage": 400},
+    }
 
-def Property(name_property, price_of_property):
-    
+           
+def Property(name_property, price_of_property, Rent_level_1):
+
     return name_property, price_of_property
     
-def Tile(name):
+def Tile_Event(name):
     
     return name
 
-def Utility(place):
-    
-    return place
 
-def Chance(name):
-    
-    return name
 
-def Community(name):
-    
-    return name
 
-def Jail(call):
-    return call
-
-def Owned(players, owned_cards):
-    return True
